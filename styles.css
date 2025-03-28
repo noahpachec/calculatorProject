@@ -8,7 +8,12 @@
     top: 30px;
     color: white;
     font-size: 3rem;
-    animation: intro-text 1s;
+    animation: text-color 3s infinite
+    ,intro-text 1s;
+    background-color: rgb(150, 37, 37);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 10px 10px #610d18;
 }
 
 body {
@@ -21,9 +26,27 @@ body {
     font-size: 16px;
     flex-direction: column;
     font-family: sans-serif;
+    animation: intro-bg 3s;
+    
 }
 
-
+@keyframes text-color {
+    0% {
+        color: #6699cc;
+    }
+    25% {
+        color: #ff3c38;
+    }
+    50% {
+        color: #db6d78;
+    }
+    75% {
+        color: #ff8c42;
+    }
+    100% {
+        color: #6699cc
+    }
+}
 
 @keyframes intro-anim {
     0% {
@@ -48,9 +71,33 @@ body {
     
 }
 
+@keyframes intro-calc {
+    0% {
+        bottom: -700px;
+    }
+
+    100% {
+        bottom: 195px;
+    }
+
+    
+}
+
+@keyframes intro-bg {
+    0% {
+        background-color: black;
+    }
+    100% {
+        background-color: #ff0a54;
+    }
+
+    
+}
+
 .calc-body {
+    position: absolute;
     border: solid black 5px;
-    background: linear-gradient(0deg, #e01e37,#641220  );
+    background: linear-gradient(0deg, #e01e37, #641220);
     width: 30rem;
     height: 35rem;
     display: flex;
@@ -59,7 +106,8 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 10px 10px #610d18;
-    animation: intro-anim 3s;
+    animation: intro-anim 1s,
+    intro-calc 1s;
 
 }
 .button {
